@@ -14,10 +14,10 @@ export const pasteSlice = createSlice({
     addToPaste: (state, action) => {
       //add a check -> paste already existed
       const paste = action.payload;
-      state.pastes.push(paste);
+      state.pastes.unshift(paste); // Add the new paste to the beginning
       localStorage.setItem("pastes", JSON.stringify(state.pastes));
-      toast.success("Paste Created Sucessfully",{
-        position:"top-right"
+      toast.success("Paste Created Sucessfully", {
+        position: "top-right",
       });
     },
 
@@ -27,31 +27,31 @@ export const pasteSlice = createSlice({
       if (index >= 0) {
         state.pastes[index] = paste;
         localStorage.setItem("pastes", JSON.stringify(state.pastes));
-        toast.success("Paste updated",{
-          position:"top-right"
+        toast.success("Paste updated", {
+          position: "top-right",
         });
       }
     },
 
     resetAllPaste: (state, action) => {
       state.pastes = [];
-      localStorage.removeItem("pastes",{
-        position:"top-right"
+      localStorage.removeItem("pastes", {
+        position: "top-right",
       });
     },
 
     removeFromPaste: (state, action) => {
-      
       const pasteId = action.payload;
 
-      console.log(pasteId);
       const index = state.pastes.findIndex((item) => item._id === pasteId);
-      
+
       if (index >= 0) {
         state.pastes.splice(index, 1);
         localStorage.setItem("pastes", JSON.stringify(state.pastes));
 
-        toast.success("Paste Deleted")
+        toast.success("Paste Deleted", {
+          position: "top-right",
+        });
       }
     },
   },

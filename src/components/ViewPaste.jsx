@@ -37,7 +37,7 @@ const viewPaste = () => {
         </div>
 
         <Copy
-          className="text-blue-500 w-[20px] cursor-pointer hover:text-blue-600 transition ml-auto mr-7"
+          className="text-blue-500 w-[20px] cursor-pointer hover:text-blue-600 transition ml-auto"
           onClick={() => {
             navigator.clipboard.writeText(paste.content);
             toast.success("Copies to Clipboard", {
