@@ -35,7 +35,7 @@ const Paste = () => {
   function handleCopy(paste) {
     navigator.clipboard.writeText(paste?.content);
     toast.success("Copied to clipboard", {
-      position: "top-right",
+      position: "bottom-right",
     });
   }
 
@@ -46,7 +46,7 @@ const Paste = () => {
       .writeText(shareableLink)
       .then(() =>
         toast.success("Shareable link copied to clipboard!", {
-          position: "top-right",
+          position: "bottom-right",
         })
       )
       .catch(() =>

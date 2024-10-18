@@ -78,7 +78,7 @@ const Home = () => {
           onClick={() => {
             navigator.clipboard.writeText(value);
             toast.success("Copies to Clipboard", {
-              position: "top-right",
+              position: "bottom-right",
             });
           }}
         />
