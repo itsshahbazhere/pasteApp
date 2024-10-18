@@ -88,7 +88,7 @@ const Home = () => {
         className="border border-t-0 border-gray-800 rounded-md rounded-t-none text-black p-2 w-full outline-none"
         value={value}
         placeholder="Write Your Content Here...."
-        rows={20}
+        rows={19}
         onChange={(e) => setValue(e.target.value)}
       />
     </div>
