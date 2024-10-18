@@ -7,8 +7,6 @@ A web application for creating, updating, viewing, and sharing text pastes. Buil
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Routing](#routing)
 
 ## Features
 
